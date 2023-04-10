@@ -9,11 +9,10 @@ type Props = {
 };
 
 export default async function Project({ params }: Props) {
-  console.log(params);
   const slug = params.project;
   const project = await getProject(slug);
   return (
-    <div className="max-w-3xl mx-auto py-20">
+    <div>
       <header className="flex justify-between items-center">
         <h1 className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-5xl drop-shadow font-extrabold">
           {project.name}
